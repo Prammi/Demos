@@ -12,7 +12,7 @@ namespace AbstractDesignPattern
         {
 
             IMobileClient nokiaMobilePhone = new Nokia();
-            MobileClient nokiaClient = new MobileClient(nokiaMobilePhone);
+            MobileAbsFactory nokiaClient = new MobileAbsFactory(nokiaMobilePhone);
 
             Console.WriteLine("********* NOKIA **********");
             nokiaClient.GetSmartPhoneModelDetails();

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace AbstractDesignPattern
 {
-    class MobileClient
+    class MobileAbsFactory
     {
         ISmartPhone smartPhone;
         INormalPhone normalPhone;
 
-        public MobileClient(IMobileClient factory)
+        public MobileAbsFactory(IMobileClient factory)
         {
             smartPhone = factory.GetSmartPhone();
             normalPhone = factory.GetNormalPhone();

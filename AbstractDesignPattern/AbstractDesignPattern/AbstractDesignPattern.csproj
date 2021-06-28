@@ -47,7 +47,7 @@
     <Compile Include="INormalPhone.cs" />
     <Compile Include="ISmartPhone.cs" />
     <Compile Include="IMobileClient.cs" />
-    <Compile Include="MobileClient.cs" />
+    <Compile Include="MobileAbsFactory.cs" />
     <Compile Include="Nokia.cs" />
     <Compile Include="Nokia1100.cs" />
     <Compile Include="NokiaPixel.cs" />
