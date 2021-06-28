@@ -3,14 +3,16 @@ using EntityFramework_DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityFramework_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210622083529_OnetoManyPublishertoTitles6")]
+    partial class OnetoManyPublishertoTitles6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +75,6 @@ namespace EntityFramework_DataAccess.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("Publisher_ID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(45)
@@ -83,20 +82,7 @@ namespace EntityFramework_DataAccess.Migrations
 
                     b.HasKey("isbn");
 
-                    b.HasIndex("Publisher_ID");
-
                     b.ToTable("Titles");
-                });
-
-            modelBuilder.Entity("EntityFramework_Model.Models.Titles", b =>
-                {
-                    b.HasOne("EntityFramework_Model.Models.Publishers", "Publishers")
-                        .WithMany()
-                        .HasForeignKey("Publisher_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Publishers");
                 });
 #pragma warning restore 612, 618
         }

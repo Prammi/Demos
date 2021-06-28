@@ -31,7 +31,8 @@ namespace Oops
 
         public override void Show()
         {
-            //override is for overiding the virtual method in the base calss .. if the base calss ie if the override_child is sealed than this will throw error 
+            //override is for overiding the virtual method in the base calss ..
+            //if the base calss ie if the override_child is sealed than this will throw error 
             Console.WriteLine("Hello : Child class 2");
         }
     }

@@ -18,7 +18,7 @@ namespace Oops
             //Abstraction and encapsulation 
 
             Abstraction obj2 = new Abstraction();
-            obj2.processOrder(); /// this is encapsulation you are showing one method here and hiding others ... we only give what is required and hide rest ...
+            obj2.processOrder(); /// this is abstraction you are showing one method here and hiding others ... we only give what is required and hide rest ...
 
             //PolyMorphism 
 
