@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallerProgramming", "ParallerProgramming\ParallerProgramming.csproj", "{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AAF143C-31EE-416A-AEB0-22F87EA5A687}
+	EndGlobalSection
+EndGlobal

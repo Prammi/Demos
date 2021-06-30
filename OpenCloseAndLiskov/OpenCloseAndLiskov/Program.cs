@@ -11,16 +11,25 @@ namespace OpenCloseAndLiskov
         static void Main(string[] args)
         {
 
+            //Liskov Failing 
+            var numbers = new int[] { 5, 7, 9, 8, 1, 6, 4 };
+            SumCalculator sum = new SumCalculator(numbers);
+            Console.WriteLine($"The sum of all the numbers: {sum.Calculate()}");
+            Console.WriteLine();
+            EvenNumbersSumCalculator evenSum = new EvenNumbersSumCalculator(numbers);
+            Console.WriteLine($"The sum of all the even numbers: {evenSum.Calculate()}");
+            SumCalculator evenSum2 = new EvenNumbersSumCalculator(numbers);
+            Console.WriteLine($"The sum of all the even numbers: {evenSum2.Calculate()}");
 
-            REctangle r = Program.getNewRectangle();
+            //Liskov Passing 
+            LiskovSumCalculator lsum = new LiskovSumCalculator(numbers);
+            Console.WriteLine($"The sum of all the numbers: {lsum.Calculate()}");
+            Console.WriteLine();
+            LiskovEvenSumCalculator levenSum = new LiskovEvenSumCalculator(numbers);
+            Console.WriteLine($"The sum of all the even numbers: {levenSum.Calculate()}");
+            LiskovSumCalculator levenSum2 = new LiskovEvenSumCalculator(numbers);
+            Console.WriteLine($"The sum of all the even numbers: {levenSum2.Calculate()}");
 
-            r.setWidth(5);
-            r.setHeight(10);
-            // user knows that r it's a rectangle. 
-            // It assumes that he's able to set the width and height as for the base class
-
-            Console.WriteLine(r.getArea());
-            // now he's surprised to see that the area is 100 instead of 50.
 
             //Open Closed
 
@@ -28,15 +37,9 @@ namespace OpenCloseAndLiskov
             _a.ShapreArea();
             Area _aa = new AbsSquare();
             _a.ShapreArea();
-
-
-
+            Console.Read();
         }
 
-        private static REctangle getNewRectangle()
-        {
-            // it can be an object returned by some factory ... 
-            return new Square();
-        }
+
     }
 }

@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maths
+namespace DependencyInversion
 {
-    class Operation
+    public enum Position
     {
-
-        public int add( int a, int b)
-        {
-            return a + b;
-        }
+        Administrator,
+        Manager,
+        Executive
     }
 }

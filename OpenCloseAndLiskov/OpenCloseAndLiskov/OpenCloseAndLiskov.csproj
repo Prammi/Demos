@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbsRectangle.cs" />
-    <Compile Include="AbsSquare.cs" />
     <Compile Include="Area.cs" />
+    <Compile Include="EvenNumbersSumCalculator.cs" />
+    <Compile Include="LiskovEvenSumCalculator.cs" />
+    <Compile Include="LiskovSumCalculator.cs" />
+    <Compile Include="LiskowSubsitution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REctangle.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="SumCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

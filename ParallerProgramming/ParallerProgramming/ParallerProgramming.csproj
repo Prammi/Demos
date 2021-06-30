@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A6ACAD9B-9CE5-4473-A1BF-E8AAEE31323A}</ProjectGuid>
+    <ProjectGuid>{05A22C33-0482-47F9-8F55-71DE3F9C9AAF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExtensionMethofs</RootNamespace>
-    <AssemblyName>ExtensionMethofs</AssemblyName>
+    <RootNamespace>ParallerProgramming</RootNamespace>
+    <AssemblyName>ParallerProgramming</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -11,18 +11,100 @@ namespace PracticeQuestions
         static void Main(string[] args)
         {
 
-            string input = "BBABAA";
-            int number = findMinValues(input);
-            Console.WriteLine(number);
+            //string input = "BBABAA";
+            //int number = findMinValues(input);
+            //Console.WriteLine(number);
             // int[] input = new int[] { 3, 5, 67, 98, 3 };
             // bool strictCount = strictlyIncreasingOrder(input);
-            Console.Read();
             //int reqStat = makeArrayConsecutive2(input);
             //int plusSize = getPlusCountfromSquare(3);
             //int sum = getMaxSum(input);
-         //   Console.WriteLine(sum);
+            //   Console.WriteLine(sum);
+            int[] A = { 51,32,43};
+            int result = customMetod(A);
+            Console.Read();
         }
 
+        private static int customMetod(int[] A)
+        {           
+            List<LSumofNumber> _sumofNumbers = new List<LSumofNumber>();
+            for (int i = 0; i < A.Length; i++)
+            {
+                LSumofNumber obj = new LSumofNumber();
+                obj.sum = SumofNumbers(A[i]);
+                obj.Number = A[i];
+                _sumofNumbers.Add(obj);
+            }
+            var result = from p in _sumofNumbers
+                         orderby p.sum descending
+                         group p by p.sum;
+            int iterator = 0;
+            int ii = 0;
+            int[] aggSum = new int[result.Count()];
+
+            foreach (var item in result)
+            {
+                int tempsum = 0;
+                Console.WriteLine(item.Key + "   " + item.Count());
+                if (item.Count() == 1)
+                {
+                    iterator++;
+                }
+                if (item.Count() >= 2)
+                {
+                    int[] indiSum = new int[item.Count()];
+                    int temps = 0;
+                    foreach (var p in item)
+                    {
+                        indiSum[temps] = p.Number;
+                        //tempsum = tempsum + p.Number;
+                        Console.WriteLine("\t{0},{1}", p.sum, p.Number);
+                        temps++;
+                    }
+                    Array.Sort(indiSum);
+                    Array.Reverse(indiSum);
+
+
+                    aggSum[ii] = indiSum[0] + indiSum[1];
+                }
+               
+                ii++;
+                
+            }
+          
+            Array.Sort(aggSum);
+            Array.Reverse(aggSum);
+            Console.WriteLine(aggSum[0]);
+
+            if (iterator == _sumofNumbers.Count)
+            {
+                return -1;
+            }
+            else
+            {
+                return aggSum[0];
+            }
+           
+        }
+
+        public static int SumofNumbers(int n)
+        {
+            int  sum = 0, m;
+            while (n > 0)
+            {
+                m = n % 10;
+                sum = sum + m;
+                n = n / 10;
+            }
+            return sum;
+
+        }
+        public class LSumofNumber
+        {
+            public int sum { get; set; }
+            public int Number { get; set; }
+
+        }
         private static int findMinValues(string input)
         {
             char[] arr = input.ToCharArray();

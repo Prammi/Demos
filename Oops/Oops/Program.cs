@@ -11,6 +11,9 @@ namespace Oops
         static void Main(string[] args)
         {
 
+            fib_itertive(9);
+          int n =  getNthFibinocci(9);
+            Console.WriteLine( "nth fib is "+ n);
             Student obj = new Student();
             obj.greeting("pramod");
 
@@ -74,7 +77,6 @@ namespace Oops
 
             //static classes with constructors
             //static constructors do not take any access specifiers
-
             //static const is called only once durong the life cycle and is called first before instance ctor.
 
             //used fro dbconn and writing logs for seeing if the class is created.
@@ -84,7 +86,33 @@ namespace Oops
             StaticClasswithConstructor _sswc = new StaticClasswithConstructor(); // this will invoce Static constructor and then instance constructor
             StaticClasswithConstructor _sswc2 = new StaticClasswithConstructor(); //only instance is invoked
 
-
+            Console.Read();
         }
+
+        private static int  getNthFibinocci(int v)
+        {
+            if (v == 0 || v == 1)
+            {
+                return v;
+            }
+            else
+            {              
+                return getNthFibinocci(v - 1) + getNthFibinocci(v - 2);
+            }
+        }
+
+        private static void fib_itertive(int n)
+        {
+            int a = 0; int b = 1; 
+            for( int i=2;i< n; i++)
+            {
+                int c = a + b;
+                Console.Write(c + "   ");
+                a = b;
+                b = c;
+            }
+        }
+
+     
     }
 }

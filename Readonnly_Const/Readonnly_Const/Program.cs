@@ -12,10 +12,6 @@ namespace Readonnly_Const
         public const string str = "GeeksforGeeks";
         public readonly int myvar1;
         public readonly int myvar2;
-
-
-      
-
         static void Main(string[] args)
         {
 

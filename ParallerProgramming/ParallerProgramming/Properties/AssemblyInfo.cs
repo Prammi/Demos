@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Extension2")]
+[assembly: AssemblyTitle("ParallerProgramming")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Extension2")]
+[assembly: AssemblyProduct("ParallerProgramming")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("43bfc793-8929-4a15-97a4-d168b82c0e2d")]
+[assembly: Guid("05a22c33-0482-47f9-8f55-71de3f9c9aaf")]
 
 // Version information for an assembly consists of the following four values:
 //

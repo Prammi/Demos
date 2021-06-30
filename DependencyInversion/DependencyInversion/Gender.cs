@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvancedMaths
+namespace DependencyInversion
 {
-    public static class Class1
+    public enum Gender
     {
+        Male,
+        Female
     }
 }

@@ -8,8 +8,8 @@ namespace FlyWeight
 {
     class PlayerFactory
     {
-        private static Dictionary<String, IPlayer> hm =
-                        new Dictionary<String, IPlayer>();
+        private static Dictionary<string, IPlayer> hm =
+                        new Dictionary<string, IPlayer>();
 
         public static IPlayer getPlayer(String type)
         {
